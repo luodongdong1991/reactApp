@@ -14,15 +14,15 @@ export default class Index extends Component {
   constructor(props: any) {
     super(props)
     //绑定他的this;
-    this.handleClick = this.handleClick.bind(this);
     this.state = {
-      list: [],
       start: '',
       msg: '1663',
       msg2: 'luodongdon',
       show: false,
+      list:[{name:'99',id:1},{name:'99',id:2}],
     }
   }
+  
   handleClick() {
     console.log()
     //修改他的值；
@@ -57,11 +57,15 @@ export default class Index extends Component {
   componentDidShow() { }
   componentDidHide() { }
   render() {
+
     return (
       <View className='index'>
-        <AtIcon value='bullet-list' className="top-icon" size='60' color='#F00' onClick={this.handleClick}></AtIcon>
+        <AtIcon value='bullet-list' className="top-icon" size='60' color='#F00' onClick={this.handleClick.bind(this)}></AtIcon>
+        {this.state.list.map(item => {
+          <View key={item.id}>{item.name}</View>
+        })}
         <AtDrawer
-          show={true}
+          show={this.state.show}
           mask
           width='180px'
           className="left-bar"
