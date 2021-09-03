@@ -1,0 +1,26 @@
+.index{
+    position: relative;
+    .tip-icon{position:fixed;left:100px;top:0;}
+    .left-bar{
+        .out-box{
+            .header-box{background-color:rgba(71, 71, 71,0.7);
+                position: relative;
+                padding:10px;
+                text-align:center;
+                height:300px;
+                .text{padding-top:200px;color:#fff;}
+                .header{
+                    position: absolute;
+                    left:50%;
+                    top:50%;
+                    transform: translate(-50%,-50%);
+                    -webkit-transform: translate(-50%,-50%);
+                    -moz-transform: translate(-50%,-50%);
+                    -ms-transform: translate(-50%,-50%);
+                    -o-transform: translate(-50%,-50%);
+                }
+            }
+            .drawer-item{padding-left:20px;font-size:28px;margin-top:10px;}
+        }
+    }
+}
